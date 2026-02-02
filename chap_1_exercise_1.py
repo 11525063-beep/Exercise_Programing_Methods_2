@@ -1,7 +1,8 @@
-torques = [1.2, 5.5, 0.8, 10.2, 4.9, -2.1, 7.0]
-safty_list=[]
-for i in range (len(torques)):
-  if -5<=torques[i]<=5:
-    safty_list.append(torques[i])
-safty_list.append(0.0)
-print(safty_list)
+def C_to_F (Celcius):
+  return (Celcius*1.8)+32
+vol = 5.5
+cel = 30
+print(f"Voltage: {vol} V\nTemperature: {cel}C ({C_to_F(cel)}F)")
+if 3<=vol<=7 and 25<=cel<=32:
+  print("The system is safe.")
+else:print("warning!!! Turn it off")
